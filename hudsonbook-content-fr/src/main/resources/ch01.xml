@@ -1,107 +1,35 @@
 <?xml version="1.0"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <chapter id="intro">
-  <title>Introducing Jenkins</title>
+  <title>Introduction à Jenkins</title>
   <sect1 id="I_sect11_d1e536">
     <title>Introduction</title>
-    <para>Continuous Integration, also know as <indexterm class="startofrange" id="ch01-ci" significance="normal"><primary>CI (Continuous Integration)</primary></indexterm><indexterm id="I_indexterm1_d1e544" significance="normal"><primary>Continuous Integration</primary><see>CI</see></indexterm>CI, is a cornerstone of modern software development. In fact
-    it is a real game changer—when Continuous Integration is introduced into
-    an organization, it radically alters the way teams think about the whole
-    development process. It has the potential to enable and trigger a series
-    of incremental process improvements, going from a simple scheduled
-    automated build right through to continuous delivery into production. A
-    good CI infrastructure can streamline the development process right
-    through to deployment, help detect and fix bugs faster, provide a useful
-    project dashboard for both developers and non-developers, and ultimately,
-    help teams deliver more real business value to the end user. Every
-    professional development team, no matter how small, should be practicing
-    CI.</para>
+    <para>L'intégration continue, aussi connue sous le nom d'<indexterm class="startofrange" id="ch01-ci" significance="normal"><primary>IC (Intégration Continue)</primary></indexterm><indexterm id="I_indexterm1_d1e544" significance="normal"><primary>Intégration Continue</primary><see>IC</see></indexterm>IC, est une pierre angulaire du développement logiciel moderne.
+    En réalité, elle a redistribué les cartes - quand l'intégration continue est introduite dans une organisation, cela change radicalement la façon dont les équipes pensent le processus global de développement.
+    Elle a le potentiel d'activer et déclencher une série d'améliorations incrémentales, allant du simple ordonnancement de build automatisé jusqu'à la livraison en continu en production.
+    Une bonne infrastructure d'intégration continue permet de rationnaliser le processus de développement jusqu'au déploiement, d'aider à détecter des défauts et les corriger plus rapidement, propose un tableau de bord fonctionnel à la fois pour les développeurs et les non développeurs, et enfin, permet aux équipes de délivrer plus de valeur métier aux utilisateurs finaux.
+    Toute équipe de développement professionnel, quelque soit sa taille, se doit de pratiquer l'intégration continue.</para>
   </sect1>
   <sect1 id="intro-sect-intro">
-    <title>Continuous Integration Fundamentals</title>
-    <para>Back in the days of waterfall projects and Gantt charts, before the
-    introduction of CI practices, development team time and energy was
-    regularly drained in the period leading up to a release by what was known
-    as the Integration Phase. During this phase, the code changes made by
-    individual developers or small teams were brought together piecemeal and
-    forged into a working product. This was hard work, sometimes involving the
-    integration of months of conflicting changes. It was very hard to
-    anticipate the types of issues that would crop up, and even harder to fix
-    them, as it could involve reworking code that had been written weeks or
-    months before. This painful process, fraught with risk and danger, often
-    lead to significant delivery delays, unplanned costs and, as a result,
-    unhappy clients. Continuous Integration was born to address these
-    issues.</para>
-    <para>Continuous Integration, in its simplest form, involves a tool that
-    monitors your version control system for changes. Whenever a change is
-    detected, this tool automatically compiles and tests your application. If
-    something goes wrong, the tool immediately notifies the developers so that
-    they can fix the issue immediately.</para>
-    <para>But Continuous Integration can do much more than this. Continuous
-    Integration can also help you keep tabs on the health of your code base,
-    automatically monitoring code quality and code coverage metrics, and
-    helping keep technical debt down and maintenance costs low. The
-    publicly-visible code quality metrics can also encourage developers to
-    take pride in the quality of their code and strive to improve it. Combined
-    with automated end-to-end acceptance tests, CI can also act as a
-    communication tool, publishing a clear picture of the current state of
-    development efforts. And it can simplify and accelerate delivery by
-    helping you automate the deployment process, letting you deploy the latest
-    version of your application either automatically or as a one-click
-    process.</para>
-    <para>In essence, Continuous Integration is about reducing risk by
-    providing faster feedback. First and foremost, it is designed to help
-    identify and fix integration and regression issues faster, resulting in
-    smoother, quicker delivery, and fewer bugs. By providing better visibility
-    for both technical and non-technical team members on the state of the
-    project, Continuous Integration can open and facilitate communication
-    channels between team members and encourage collaborative problem solving
-    and process improvement. And, by automating the deployment process,
-    Continuous Integration helps you get your software into the hands of the
-    testers and the end users faster, more reliably, and with less
-    effort.</para>
-    <para>This idea of automated deployment is important. Indeed, if you take
-    automating the deployment process to its logical conclusion, you could
-    push every build that passes the necessary automated tests into
-    production. The practice of automatically deploying every successful build
-    directly into production is generally known as<indexterm id="I_indexterm1_d1e563" significance="normal"><primary>continuous deployment</primary></indexterm> <emphasis>Continuous <phrase role="keep-together">Deployment</phrase></emphasis>.</para>
-    <para>However, a pure Continuous Deployment approach is not always
-    appropriate for everyone. For example, many users would not appreciate new
-    versions falling into their laps several times a week, and prefer a more
-    predictable (and transparent) release cycle. Commercial and marketing
-    considerations might also play a role in when a new release should
-    actually be deployed.</para>
-    <para>The notion of <emphasis><indexterm id="I_indexterm1_d1e577" significance="normal"><primary>continuous delivery</primary></indexterm>Continuous Delivery</emphasis> is a slight variation on the
-    idea of Continuous Deployment that takes into account these
-    considerations. With Continuous Delivery, any and every successful build
-    that has passed all the relevant automated tests and quality gates can
-    <emphasis>potentially</emphasis> be deployed into production via a fully
-    automated one-click <phrase role="keep-together">process</phrase>, and be
-    in the hands of the end-user within minutes. However, the process is not
-    automatic: it is the business, rather than IT, that decides the best time
-    to deliver the latest changes.</para>
+    <title>Les fondamentaux de l'intégration continue</title>
+    <para>À l'époque des projets développés selon le cycle en V (ou en cascade), avec les graphiques Gannt, avant l'introduction des pratiques de l'intégration continue, le temps et l'énergie des équipes de développement étaient régulièrement dilapidés lors des périodes précédant une livraison durant ce que l'on a coutume d'appeler la phase d'intégration.
+    Lors de cette phase, les modifications de code réalisés individuellement par les développeurs ou par de petites équipes étaient assemblées au sein d'un produit fonctionnel. Il s'agissait là d'un travail complexe, impliquant souvent l'intégration des mois de modifications conflictuelles.
+    Il était très complexe d'anticiper les types de problèmes qui pouvaient surgir, et plus difficile encore de les corriger, car cela nécessitait de retravailler un code écrit plusieurs semaines ou mois auparavant.
+    De ce processus douloureux, semé d'embûches et de dangers, résultait souvent des décalages importants de livraison, des coûts inattendus, et, au final, des clients mécontents.
+    L'intégration continue est née pour résoudre ces problèmes.</para>
+    <para>L'intégration continue, dans sa forme la plus simple, implique un outil qui traque les modifiction sur votre gestionnaire de versions. Dès lors qu'une modification est détectée, cet outil va automatiquement compiler et tester votre application. Si quelque chose se passe mal, l'outil va immédiatement notifier les développeurs, de telle façon qu'ils seront à même de corriger l'erreur sans délai.</para>
+    <para>Cependant, l'intégration continue peut faire bien plus que cela. L'intégration continue peut vous aider à garder un œil sur la santé de votre base de code, surveiller automatiquement la qualité du code, ainsi que des mesures de couverture de ce dernier, mais également aider à conserver une dette technique et des coûts de maintenance faibles.
+    La visibilité publique des mesures de qualité du code va également encourager les développeurs à être fiers de la qualité de leur code et s'efforceront à l'améliorer encore d'avantage.
+    Combinée à un système de tests d'acceptation, l'intégration continue peut aussi servir d'outil de communication, en publiant une vision claire de l'état actuel des efforts de développement. Elle simplifie et accélère la livraison en facilitant l'automatisation du processus de déploiement, permettant de déployer la dernière version de votre application, que ce soit automatiquement ou encore à la demande.</para>
+    <para>En substance, l'intégration continue vise à réduire le risque en fournissant un feed-back plus rapide. D'abord et avant tout, il est destiné à identifier et fixer les problèmes d'intégration et de régressions plus rapidement, résultant une livraison plus rapide, plus fluide, et moins bugguée. En fournissant une meilleure visibilité sur l'état du projet à la fois pour les équipes techniques et non techniques, l'intégration continue peut faciliter la communication entre les membres d'une équipe, et encourager la résolution collaborative des problèmes, ainsi que l'améliorations des processus. De plus, grâce à l'automatisation du processus de déploiement, l'intégration continue va mettre plus rapidement votre application entre les mains des testeurs et des utilisateurs finaux, de façon également plus sûre, et à moindre effort.</para>
+    <para>Cette idée du déploiement automatisé est importante. En effet, si vous amenez l'automatisation du processus de déploiement à sa conclusion logique, vous pourrez alors pousser n'importe quel build en production, pour peu qu'il ait passé avec succès les tests automatisés requis. La pratique consistant à déployer automatiquement en production chaque build réussi est généralement connue sous le nom de <indexterm id="I_indexterm1_d1e563" significance="normal"><primary>déploiement continu</primary></indexterm> <emphasis>Déploiement <phrase role="keep-together">Continu</phrase></emphasis>.</para>
+    <para>Toutefois, une approche pure du déploiement continu n'est pas toujours approprié pour chacun. Par exemple, de nombreux utilisateurs ne souhaitent pas voir apparaitre plusieurs nouvelles versions chaque semaine, et se sentiront plus à l'aise avec un cycle de livraison plus prévisible (et transparent). Des considérations commerciales peuvent également jouer un rôle sur la décision de déployer ou non une nouvelle version.</para>
+    <para>La notion de <emphasis><indexterm id="I_indexterm1_d1e577" significance="normal"><primary>livraison continue</primary></indexterm>Livraison Continue</emphasis> est une légère variation de l'idée de déploiement continu qui prend en compte ces considérations. Avec la livraison continue, chacun des builds construits avec succès et ayant passé tous les tests et les portes de sécurité peut <emphasis>potentiellement</emphasis> être déployé en production à travers un <phrase role="keep-together">processus</phrase> automatique en un clic, et ainsi être mis entre les mains des utilisateurs finaux en l'espace de quelques minutes. Toutefois, le processus n'est pas automatique : c'est le métier, plutôt que la technique, qui décide du meilleur moment de la livraison des dernières modifications.</para>
     <?dbfo-need height=”1in”?>
-    <para>So Continuous Integration techniques, and in particular Continuous
-    Deployment and Continuous Delivery, are very much about providing value to
-    the end user faster. How long does it take your team to get a small code
-    change out to production? How much of this process involves problems that
-    could have been fixed earlier, had you known about the code changes that
-    Joe down the corridor was making? How much is taken up by labor-intensive
-    manual testing by QA teams? How much involves manual deployment steps, the
-    secrets of which are known only to a select few? CI is not a silver bullet
-    by any means, but it can certainly help streamline many of these
-    problems.</para>
-    <para>But Continuous Integration is a mindset as much as a toolset. To get
-    the most out of CI, a team needs to adopt a CI mentality. For example,
-    your projects must have a reliable, repeatable, and automated build
-    process, involving no human intervention. Fixing broken builds should take
-    an absolute priority, and not be left to stagnate. The deployment process
-    should be automated, with no manual steps involved. And since the trust
-    you place in your CI server depends to a great extent on the quality of
-    your tests, the team needs to place a very strong emphasis on high quality
-    tests and testing practices.</para>
-    <para>In this book we will be looking at how to implement a robust and
-    comprehensive Continuous Integration solution using Jenkins<indexterm id="I_indexterm1_d1e596" class="endofrange" startref="ch01-ci" significance="normal"><primary/></indexterm> or Hudson.</para>
+    <para>Les techniques de l'intégration continue, en particulier le déploiement et la livraison continus, sont étroitement liées au fait de fournir plus rapidement de la valeur au client final. Combien de temps faut-il à votre équipe pour délivrer en production une petite modification de code ? Durant ce processus, combien de problèmes vont apparaitre, alors qu'ils auraient pu être fixés plus tt ? Étiez-vous au courant de cette modification que Joe a faite dans le code ? Combien de temps perdu par les tests manuels et laborieux réalisés par les équipes qualité ? Combien d'étapes manuelles, de secrets détenus par une poignée de personnes ?
+    L'intégration continue n'est pas un remède miracle, mais elle peut certainement résoudre une partie de ces problèmes.</para>
+    <para>Cependant, l'intégration continue est autant un état d'esprit qu'un outil. Afin de tirer le meilleur de l'intégration continue, une équipe a besoin de l'adopter mentalement. Par exemple, vos projets doivent être fiables, répétables, construits selon un processus automatisé, et n'impliquer aucune intervention humaine. La résolution des builds échoués doit être considérée comme une priorité absolue, et ne doit pas être laissée à l'abandon. Le processus de déploiement doit être automatisé, et sans intervention humaine. Et comme la confiance que vous placez dans votre système d'intégration continue dépend fortement de la qualité de vos tests, l'équipe doit mettre l'accent sur l'écriture de tests de qualité, ainsi que la mise en place de bonnes pratiques de tests.</para>
+    <para>Dans cet ouvrage, nous verrons comment implémenter une solution robuste et complète d'intégration continue en utilisant Jenkins<indexterm id="I_indexterm1_d1e596" class="endofrange" startref="ch01-ci" significance="normal"><primary/></indexterm> ou Hudson.</para>
   </sect1>
   <sect1 id="intro-sect-introducing-jenkins">
     <title>Introducing Jenkins (née Hudson)</title>
